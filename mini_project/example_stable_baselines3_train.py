@@ -238,7 +238,7 @@ if __name__ == '__main__':
         eval_env,
         best_model_save_path=str(trial_dir / "eval"),
         log_path=str(trial_dir / "eval"),
-        eval_freq=max(eval_freq // num_eval_envs, 1),
+        eval_freq=max(eval_freq // num_train_envs, 1),
         n_eval_episodes=num_eval_episodes,
     )
     callbacks = [checkpoint_callback, eval_callback]
