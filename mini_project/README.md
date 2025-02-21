@@ -67,6 +67,8 @@ def single_env_factory():
   ** (pytorch and numpy are fine. We will stick to torch=2.6.0). You can refer to `agents/agent_000000000` for an
   example.
 - Name your agent subfolder with `agent_YOUR-UID` (e.g., `agents/agent_000000000/`).
+- Please make sure your agent can be evaluated by running `python eval.py --agent-name agent_YOUR-UID`, when current working directory is `mini_project`.
+- To ensure compatibility, you can create a new conda environment with only torch and some basic packages installed. Then run `eval.py` in this environment to check if your agent can be evaluated.
 
 ## **What You Need to Submit**
 
@@ -126,6 +128,9 @@ We will evaluate your agent on the validation environment. Concretely, we will r
 
 ```bash
 python eval.py --agent-name agent_YOUR-UID
+
+# You can also play with the provided SB3 PPO agent:
+python eval.py --agent-name agent_sb3
 ```
 
 The above command will run your agent in the validation environment for 100 episodes and report the average episode
