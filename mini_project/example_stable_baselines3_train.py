@@ -243,7 +243,13 @@ if __name__ == '__main__':
     )
     callbacks = [checkpoint_callback, eval_callback]
     if use_wandb:
-        wandb.init()
+        wandb.init(
+            project="cs260r",
+            id=trial_name,
+            name=experiment_batch_name,
+            sync_tensorboard=True,
+            dir=str(trial_dir),
+        )
         callbacks.append(WandbCallback(model_save_path=str(trial_dir / "wandb_models"), model_save_freq=wandb_save_freq))
     callbacks = CallbackList(callbacks)
 
