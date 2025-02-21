@@ -93,15 +93,16 @@ if __name__ == '__main__':
 
     # Instantiate all policies here.
     all_policies = load_policies()
-    policy_map = {}
+    policy_class_map = {}
     for key, Policy in all_policies.items():
-        policy_map[key] = Policy()
+        policy_class_map[key] = Policy
 
     # We will use the specified agent.
     agent_name = args.agent_name
-    if agent_name not in policy_map:
+    if agent_name not in policy_class_map:
         raise ValueError(f"Agent {agent_name} not found in the agents folder {policy_map.keys()}!")
-    policy = policy_map[agent_name]
+    policy_class = policy_class_map[agent_name]
+    policy = policy_class()
 
     print("==================================================")
     print(f"EVALUATING AGENT {agent_name} (CREATOR: {policy.CREATOR_NAME}, UID: {policy.CREATOR_UID})")
