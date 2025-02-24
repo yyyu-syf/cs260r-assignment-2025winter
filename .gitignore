@@ -2,4 +2,5 @@
 *
 
 # Allow tracking of the specific folder
-!mini_project/*
+!mini_project/*.py
+!mini_project/agents/*
