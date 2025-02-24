@@ -1,6 +1,6 @@
 # Ignore everything
 *
 
-# Allow tracking of the specific folder
-!mini_project/*.py
-!mini_project/agents/*
+# Allow tracking of all files under mini_project
+!mini_project/
+!mini_project/**
