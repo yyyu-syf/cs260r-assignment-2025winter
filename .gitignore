@@ -1,0 +1,5 @@
+# Ignore everything
+*
+
+# Allow tracking of the specific folder
+!mini_project/
