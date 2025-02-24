@@ -19,8 +19,8 @@ class Policy:
     Please do not import any external package.
     """
     # FILLED YOUR PREFERRED NAME & UID HERE!
-    CREATOR_NAME = "Zhenghao Peng"  # Your preferred name here in a string
-    CREATOR_UID = "000000000"  # Your UID here in a string
+    CREATOR_NAME = "Yufei Song"  # Your preferred name here in a string
+    CREATOR_UID = "105514254"  # Your UID here in a string
 
     def __init__(self):
         config = PPOConfig()

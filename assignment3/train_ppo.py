@@ -21,8 +21,8 @@ from core.envs import make_envs
 from core.ppo_trainer import PPOTrainer, PPOConfig
 from core.utils import verify_log_dir, pretty_print, Timer, step_envs
 
-gym.logger.set_level(40)
-
+# gym.logger.set_level(40)
+gym.logger.min_level = 40
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--log-dir", default="data/", type=str, help="The directory where you want to store the data. "
